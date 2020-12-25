@@ -24,6 +24,10 @@ button:hover {
   background: white;
 }
 
+section {
+  min-height: 100vh;
+}
+
 /* Start */
 .start {
   min-height: 100vh;
@@ -36,6 +40,8 @@ button:hover {
 
 .country {
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards {
@@ -47,6 +53,7 @@ button:hover {
   display: flex;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  width: 40vw;
 }
 
 .card div {
@@ -55,4 +62,38 @@ button:hover {
 
 .card:hover {
   border: 2px solid #e74c3c;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 20vw;
+}
+
+#arrow-left,
+#arrow-right {
+  font-size: 15vw;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+/* Game section */
+.game {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.game p {
+  width: 40%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+#hud {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 40vw;
 }
