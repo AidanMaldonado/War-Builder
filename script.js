@@ -8,10 +8,13 @@ const card2 = document.querySelector("#faction2");
 const card3 = document.querySelector("#faction3");
 const storyP = document.querySelector("#story-p");
 const hud = document.querySelector("#hud");
+const mapSection = document.querySelector(".map-section");
+const matSection = document.querySelector(".mat-section");
 //Slider buttons
 const rightArrow = document.querySelector("#arrow-right");
 //Game buttons
 const map = document.querySelector("#map");
+const mat = document.querySelector("#mat");
 
 //Game variables
 let card = 1;
@@ -22,6 +25,8 @@ const atStart = () => {
   countrySection.style.display = "none";
   gameSection.style.display = "none";
   hud.style.display = "none";
+  mapSection.style.display = "none";
+  matSection.style.display = "none";
 };
 
 //Picks faction
@@ -84,7 +89,20 @@ card3.addEventListener("click", () => {
   pickedFaction();
 });
 
-map.addEventListener("click", () => {});
+//HUD buttons
+map.addEventListener("click", () => {
+  mapSection.style.display = "grid";
+  matSection.style.display = "none";
+  hud.style.display = "none";
+});
+
+mat.addEventListener("click", () => {
+  mapSection.style.display = "none";
+  hud.style.display = "none";
+  matSection.style.display = "flex";
+});
+
+//Procedural Generation
 
 //Function calls
 atStart();
